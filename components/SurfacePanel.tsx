@@ -15,10 +15,16 @@ export function SurfacePanel({ panel, index, active, onSelect }: SurfacePanelPro
       style={{ transformOrigin: `${20 + index * 18}% 50%` }}
     >
       <div className="panelFrame">
-        <div className="panelMini" />
+        <div className={`panelMini panelMini${index + 1}`}>
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-      <span className="label">Panel {index + 1}</span>
-      <h2>{panel.title}</h2>
+      <div className="panelMeta">
+        <span className="label">Panel {index + 1}</span>
+        <strong>{panel.title}</strong>
+      </div>
       <p>{panel.description}</p>
     </article>
   );
