@@ -1,25 +1,53 @@
 # SurfaceBend
 
-SurfaceBend is the website-to-living-interface starter in the Living Interfaces suite.
+SurfaceBend is a standalone prototype for turning web layouts into living, tactile interface scenes.
 
-## MVP
+## What It Is
 
-- Paste a URL or concept target
-- Preview section ideas as interactive panels
-- Explore motion direction before adding heavy rendering
-- Keep the first version demo-first and portable
+SurfaceBend explores a product direction where websites feel more physical and responsive:
 
-## Run
+- URL-led concept flow
+- panel-based motion previews
+- tactile visual language
+- premium landing-style presentation
+
+## Current Features
+
+- preview a target URL concept
+- select between multiple surface behaviors
+- inspect motion intent and interaction style
+- explore a stronger landing-page treatment for the product
+
+## Stack
+
+- Next.js
+- React
+- TypeScript
+- pnpm
+
+## Run Locally
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open `http://localhost:3000`.
 
+## Deployment
+
+Recommended first deployment target:
+
+- Vercel
+
+Suggested environment:
+
+- standalone project
+- one deployment per repo
+- production branch: `main`
+
 ## Next Steps
 
-- Replace mock tiles with real page capture
-- Add WebGL panel bending
-- Add export and share flows
+- replace mock tiles with real page capture
+- add richer panel motion and depth behavior
+- add export and share flows
