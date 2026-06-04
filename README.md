@@ -1,29 +1,33 @@
 # SurfaceBend
 
-SurfaceBend is a standalone prototype for turning web layouts into living, tactile interface scenes.
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](package.json)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black.svg)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
+[![Release](https://img.shields.io/badge/release-public%20demo-orange.svg)](RELEASE_MEMORY.md)
 
-## What It Is
+Tactile web-layout prototype for turning interface panels into living, responsive surface scenes.
 
-SurfaceBend explores a product direction where websites feel more physical and responsive:
+> **Status:** Public demo-ready · static build verified · URL capture is conceptual in the current version
 
-- URL-led concept flow
-- panel-based motion previews
+## Why This Exists
+
+Web pages are usually flat. SurfaceBend explores how a web layout could feel more physical through panel motion, surface behavior, and premium landing-page presentation.
+
+## Key Technical Decisions
+
+**The URL flow is conceptual first.** The current demo focuses on the interaction language before building real capture infrastructure.
+
+**Static Next.js output keeps deployment simple.** The prototype can be hosted publicly without backend capture services.
+
+**Surface behaviors communicate product direction.** Different motion modes make the idea inspectable even before real page rendering is implemented.
+
+## Features
+
+- URL-led concept input
+- surface behavior selector
+- panel motion preview
 - tactile visual language
-- premium landing-style presentation
-
-## Current Features
-
-- preview a target URL concept
-- select between multiple surface behaviors
-- inspect motion intent and interaction style
-- explore a stronger landing-page treatment for the product
-
-## Stack
-
-- Next.js
-- React
-- TypeScript
-- pnpm
+- responsive landing-style demo
 
 ## Run Locally
 
@@ -36,18 +40,27 @@ Open `http://localhost:3000`.
 
 ## Deployment
 
-Recommended first deployment target:
+| Setting | Value |
+|---|---|
+| Release scope | Public demo |
+| Framework preset | `Next.js` |
+| Build command | `pnpm build` |
+| Build output directory | `out` |
+| Node version | `20.19.6` |
 
-- Vercel
+## Verification
 
-Suggested environment:
+```bash
+pnpm build
+pnpm exec tsc --noEmit
+```
 
-- standalone project
-- one deployment per repo
-- production branch: `main`
+## Known Limits
 
-## Next Steps
+- No real page capture yet.
+- No export/share pipeline yet.
+- Motion behavior is prototype-level.
 
-- replace mock tiles with real page capture
-- add richer panel motion and depth behavior
-- add export and share flows
+## Author
+
+Built by **Sudarshan Chaudhari** — SudarshanTechLabs.
