@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { UrlCaptureForm } from "../components/UrlCaptureForm";
 import { SurfacePanel } from "../components/SurfacePanel";
 import { starterPanels } from "../lib/starter-data";
+import { selectById } from "../lib/selectById";
 
 const stats = [
   { label: "Preview mode", value: "Tactile" },
@@ -16,7 +17,7 @@ export default function HomePage() {
   const [activePanel, setActivePanel] = useState<string | null>(starterPanels[0]?.id ?? null);
 
   const selected = useMemo(
-    () => starterPanels.find((panel) => panel.id === activePanel) ?? starterPanels[0],
+    () => selectById(starterPanels, activePanel, starterPanels[0]),
     [activePanel]
   );
 
