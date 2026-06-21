@@ -36,3 +36,33 @@ This is a **prototype, not a product.** Real product would need:
 ## Deployment
 
 Not yet deployed. Self-hosted on your own domain when ready.
+
+## File-by-file checklist
+
+### App shell
+- [x] `app/layout.tsx` — root layout
+- [x] `app/page.tsx` — surface UI (URL form + panel preview)
+- [x] `app/globals.css` — base styles
+
+### Components
+- [x] `components/UrlCaptureForm.tsx` — URL input (no validation; submit is no-op)
+- [x] `components/SurfacePanel.tsx` — panel rendering
+
+### Lib
+- [x] `lib/starter-data.ts` — 3 hardcoded panel definitions (hero / feature / cta)
+- [x] `lib/selectById.ts` — pure nullable-id find-by-id helper (extracted)
+
+### Tests
+- [x] `lib/selectById.test.ts` — 7 tests (5 selectById incl. null id case + 2 starter-data integrity guards)
+
+### Quality + scaffolding
+- [x] ESLint configured (0 errors, 0 warnings)
+- [x] `typecheck` + `test` scripts
+- [x] Build + lint + typecheck green
+
+### Not done (product gaps — need spec)
+- [ ] Actually capture a website (URL form currently does nothing)
+- [ ] Real bend / ripple / hover effects (current implementation is CSS only; the original concept hinted at canvas/WebGL)
+- [ ] Export functionality (README mentions "export-ready outputs" but none exist)
+- [ ] Persistence (no saved surfaces)
+- [ ] Product spec answering: designer prototyping tool? Marketing splash-page builder? Demo for a future SDK?
