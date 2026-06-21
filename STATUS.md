@@ -66,3 +66,33 @@ Not yet deployed. Self-hosted on your own domain when ready.
 - [ ] Export functionality (README mentions "export-ready outputs" but none exist)
 - [ ] Persistence (no saved surfaces)
 - [ ] Product spec answering: designer prototyping tool? Marketing splash-page builder? Demo for a future SDK?
+
+## Categorized work remaining
+
+| Item | Effort | Bucket | Blocker | Priority |
+|------|--------|--------|---------|----------|
+| Deploy as a prototype demo | ~30m | 🔑 Needs hosting | hosting access; no env vars | P2 |
+| Website capture | 1–2d | 🎯 Needs spec then 🟦 Pure code | Playwright on the server (screenshot) or iframe (real DOM)? CORS implications? | P1 |
+| Real bend/ripple effects | 1–2d | 🎯 Needs spec then 🟦 Pure code | Canvas 2D? WebGL (Three.js)? Pure CSS? | P1 |
+| Export | half day | 🎯 Needs spec then 🟦 Pure code | PNG/SVG/video/code-snippet? | P2 |
+| Persistence | half day | 🟦 Pure code (+🔑 if hosted DB) | local first, then DB if multi-device | P3 |
+
+## Product spec questions (answer one sentence each)
+
+1. **What's the actual use case?** Marketing landing-page builder, designer prototyping tool, tech demo for a future SDK, or something else?
+2. **How does it capture a website?** Screenshot via Playwright? Embed in iframe? Full DOM clone?
+3. **What does "bend" mean technically?** CSS transform? WebGL displacement shader? Three.js mesh?
+4. **What gets exported?** Static PNG/SVG, animated GIF/video, embeddable code snippet, or React component?
+5. **Single-shot tool or saved-projects app?** Bend-and-leave, or library of saved surfaces?
+
+## Release plan
+
+**Current state = prototype demo, CSS-only.** Release plan once spec'd:
+
+1. Tag current state as `v0.1.0 — UI prototype, hardcoded panels`.
+2. Add real website capture + first bend effect → `v0.2.0`.
+3. Add export → `v0.3.0`.
+4. Add persistence + multi-surface library → `v1.0.0`.
+
+### Deploy prerequisites (for the prototype demo)
+**None.** Zero env vars (until website capture / export is added).
